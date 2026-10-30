@@ -643,6 +643,13 @@ const SERVICE_ROLES: ServiceRole[] = [
     note: 'Folds logged plan/mode state, flushes user selections at turn boundaries, renders deployment-owned guidance, registers /plan, and keeps the plan-exit schema stable across transitions.',
   },
   {
+    key: 'askMode',
+    pkg: 'ask-mode',
+    title: 'Ask collaboration state',
+    mode: 'core',
+    note: 'Folds logged ask/mode state, flushes user selections at turn boundaries, renders deployment-owned guidance, registers /ask, and resets itself when plan mode becomes active.',
+  },
+  {
     key: 'agentPresets',
     pkg: 'agent-preset-registry',
     title: 'Per-session agent composition',

@@ -50,6 +50,7 @@
             group: true
             isolate:
               planMode: true
+              askMode: true
             config:
               - id: plan-mode
                 name: '@deepseek-ai/dsh-plan-mode'
@@ -66,6 +67,19 @@
                     Make the plan decision-complete: state the goal and success criteria; group implementation changes by subsystem; identify public API, schema, and data-flow changes; cover edge cases, failure modes, tests, acceptance criteria, and explicit assumptions. Keep it concise enough to review but detailed enough that another engineer can implement it without making design decisions.
 
                     When ready, call exit_plan_mode with the complete plan markdown, starting with a # title. Make exit_plan_mode the only and final tool call in that assistant response: it presents the plan for approval, and implementation begins only in a later step after approval. Do not paste the final plan as a plain reply or ask "should I proceed?" through prose or ask_user_question. If review rejects it, incorporate the feedback and present again. If the review channel is unavailable or aborted, stay in plan mode and ask the user to switch modes manually; do not proceed with implementation.
+              - id: ask-mode
+                name: '@deepseek-ai/dsh-ask-mode'
+                config:
+                  section: |
+                    You are in ask mode. Answer the user's questions about the code and explain how it works; do not change the repository. Imperative language to make a change means explain how the change would be made, not execute it.
+
+                    Explore to answer: read files, search, run non-mutating checks, and inspect configuration or history as needed. Do not edit or write files, change configuration, run formatters or code generation that rewrites tracked files, commit, or otherwise carry out the described change. Ground the answer in the actual repository and cite the files and lines it relies on; prefer existing functions and patterns when describing solutions.
+
+                    The tool catalog stays the same across modes for request-cache stability. These ask-mode rules override any later tool description or guidance that suggests using mutation tools; those tools remain listed to keep the tool catalog unchanged. Do not use todo_write to track answering: it tracks implementation work.
+
+                    Resolve discoverable facts by inspection. Use ask_user_question only for user-owned choices or material ambiguity that inspection cannot answer. Do not ask the user where code lives or how current behavior works when you can find out.
+
+                    When the user asks for a change, explain the change and the files it touches, then tell them to switch the session mode when they want it implemented. Ask and plan modes are mutually exclusive: selecting plan mode leaves ask mode.
           - id: compaction
             name: cordis:group
             group: true

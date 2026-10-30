@@ -1,0 +1,46 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/experimental/turn-trigger/README.md
+/:
+  en: 045ba0dbed2dce53
+  zh: 4b4c6759f6d20e92
+/deepseek-ai-dsh-experimental-turn-trigger:
+  en: 43fb3c0f9d48ed82
+  zh: b6721abf2f8f33cb
+/deepseek-ai-dsh-experimental-turn-trigger/summary:
+  en: 91617b23e7f669d1
+  zh: 34e4c504dd09b9a5
+/deepseek-ai-dsh-experimental-turn-trigger/table-of-contents:
+  en: 76368b6b1da79c80
+  zh: 52384aee991ac542
+/deepseek-ai-dsh-experimental-turn-trigger/use-this-package:
+  en: 11286f00af3b12f6
+  zh: 8c1fcb0d3312927f
+/deepseek-ai-dsh-experimental-turn-trigger/use-this-package/install-into-a-profile:
+  en: 8a7fd0a2a9b01ad0
+  zh: 825b05e8ed0b374b
+/deepseek-ai-dsh-experimental-turn-trigger/understand-the-implementation:
+  en: 84459621f2ca5a87
+  zh: 85d74d58b55c515f
+/deepseek-ai-dsh-experimental-turn-trigger/model-experience:
+  en: 215e7ba838619b7b
+  zh: a311da3843709f90
+/deepseek-ai-dsh-experimental-turn-trigger/model-experience/turn-end-trigger-message:
+  en: d3ad3a813bbf3a3c
+  zh: 25be0b7cc2ad4ee8
+/deepseek-ai-dsh-experimental-turn-trigger/model-experience/turn-end-trigger-message/what-the-model-sees:
+  en: 03b498eb3975b6ae
+  zh: 20a38da30c6092e7
+/deepseek-ai-dsh-experimental-turn-trigger/model-experience/turn-end-trigger-message/token-effect:
+  en: 69f9e332332a5f23
+  zh: 0ce9e68c638a2091
+/deepseek-ai-dsh-experimental-turn-trigger/model-experience/turn-end-trigger-message/kv-cache-effect:
+  en: 14db7386bb249a58
+  zh: 204167b26cf2614c
+/deepseek-ai-dsh-experimental-turn-trigger/known-limitations-and-deferred-work:
+  en: 5264db49a032e323
+  zh: 96c85ea635a1f949
+/deepseek-ai-dsh-experimental-turn-trigger/known-limitations-and-deferred-work/dev-note:
+  en: a91ef027f9ae2ae2
+  zh: 1603b6124d820e99

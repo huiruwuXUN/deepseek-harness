@@ -1,0 +1,3 @@
+- insert:
+    - id: turn-trigger
+      name: '@deepseek-ai/dsh-experimental-turn-trigger'

@@ -171,6 +171,7 @@ Factory: conversation.content [ConversationContent]
 │  ├─ conversation.input.attachments
 │  ├─ conversation.input.permission
 │  ├─ conversation.input.plan
+│  ├─ conversation.input.ask
 │  ├─ conversation.input.model
 │  │  └─ conversation.input.model.label
 │  ├─ conversation.input.overlay

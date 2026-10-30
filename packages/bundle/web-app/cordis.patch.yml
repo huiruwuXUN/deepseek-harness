@@ -458,6 +458,10 @@
     - id: ui-plan
       name: '@deepseek-ai/dsh-client-ui-plan'
 
+    # Ask control: the composer ask seat over the ask projection + /ask channel.
+    - id: ui-ask
+      name: '@deepseek-ai/dsh-client-ui-ask'
+
     - id: ui-user-questions
       name: '@deepseek-ai/dsh-client-ui-user-questions'
 
@@ -534,6 +538,9 @@
   disabled: true
 
 - id: plan-mode
+  disabled: true
+
+- id: ask-mode
   disabled: true
 
 # The token METER stays on the host plane; only the compaction backend that

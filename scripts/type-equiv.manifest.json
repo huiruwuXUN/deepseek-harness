@@ -2761,6 +2761,11 @@
       "doc": "docs/subsystems/forge.md",
       "symbol": "ForgeReviewResult",
       "source": "packages/experimental/forge/src/types.ts"
+    },
+    {
+      "doc": "docs/subsystems/ask-mode.md",
+      "symbol": "AskModeConfig",
+      "source": "packages/plan/ask-mode/src/index.ts"
     }
   ]
 }

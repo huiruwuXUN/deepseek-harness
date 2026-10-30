@@ -63,6 +63,7 @@ function snapshotOf(overrides: Partial<SessionSnapshot> = {}): SessionSnapshot {
 
 interface BenchOptions {
   planEntry?: React.ReactNode
+  askEntry?: React.ReactNode
   /** The `plan` projection value the standard-kit useProjection serves. */
   plan?: { active: boolean; pending: boolean }
   /** The `goal` projection value used only to prove attachment intake remains ordinary. */
@@ -174,6 +175,7 @@ function bench(over?: BenchOptions) {
     if (key === 'conversation.input.right') return over?.rightItems ?? null
     if (key === 'conversation.composer.dock') return over?.footer ?? null
     if (key === 'conversation.input.plan') return over?.planEntry ?? null
+    if (key === 'conversation.input.ask') return over?.askEntry ?? null
     if (key === 'conversation.input.permission') return over?.permissionEntry ?? null
     if (key === 'conversation.input.model') return over?.modelEntry ?? null
     if (key === 'conversation.input.activity') return over?.activityEntry?.(owner as InputActivityOwnerProps) ?? null
@@ -2068,7 +2070,7 @@ describe('command launcher chrome and control seats', () => {
     // seat set is the contract).
     expect([...new Set(slotCalls.map(c => c.key))]).toEqual([
       'conversation.input.overlay', 'conversation.input.attachments',
-      'conversation.input.permission', 'conversation.input.plan', 'conversation.input.left',
+      'conversation.input.permission', 'conversation.input.plan', 'conversation.input.ask', 'conversation.input.left',
       'conversation.input.right', 'conversation.input.model', 'conversation.input.activity',
       'conversation.composer.dock',
     ])
@@ -2127,7 +2129,7 @@ describe('command launcher chrome and control seats', () => {
     expect(view.getByTestId('model-entry')).toBeTruthy()
     // The bar hands its chrome disable state to the filling entry.
     const controlKeys = new Set([
-      'conversation.input.permission', 'conversation.input.plan', 'conversation.input.model',
+      'conversation.input.permission', 'conversation.input.plan', 'conversation.input.ask', 'conversation.input.model',
     ])
     const controls = slotCalls.filter(call => controlKeys.has(call.key))
     expect(controls.every(c => (c.owner as { locked: boolean }).locked)).toBe(true)

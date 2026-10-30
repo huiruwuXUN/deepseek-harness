@@ -1,0 +1,25 @@
+# Bilingual-pair consistency record for ask-mode.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write docs/subsystems/ask-mode.md
+/ask-mode:
+  en: 06444c45f933bc2d
+  zh: a7a0ddac01808d3a
+/ask-mode/logged-state-and-recovery:
+  en: dc0f00bac2a2ba20
+  zh: 4485f5efa05c971a
+/ask-mode/pending-selections-and-the-pre-step-append:
+  en: 651a254bb7918a53
+  zh: 1b1a783607742f0f
+/ask-mode/mutual-exclusion-with-plan-mode:
+  en: e3564c7de0c18cf2
+  zh: f231335ef4256312
+/ask-mode/configuration:
+  en: 8c4c7e0cbff342a1
+  zh: dfc5560650c908d3
+/ask-mode/the-ask-command:
+  en: 942dc6e14133c690
+  zh: 901bfda6619c9c06
+/ask-mode/the-service:
+  en: 353463dfadd7c572
+  zh: 7029d53735b1475c

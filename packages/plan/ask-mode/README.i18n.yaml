@@ -1,0 +1,82 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/plan/ask-mode/README.md
+/:
+  en: 7fbbbb39b1fac952
+  zh: 10dc61af65545df2
+/deepseek-ai-dsh-ask-mode:
+  en: 9f72677c4f02a49f
+  zh: f6465df72158caed
+/deepseek-ai-dsh-ask-mode/summary:
+  en: b49e3741e1a1250b
+  zh: 26142b5e38bc8fcf
+/deepseek-ai-dsh-ask-mode/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/deepseek-ai-dsh-ask-mode/use-this-package:
+  en: 5a120a6a74ee6bcf
+  zh: 9b54a8d518b4355a
+/deepseek-ai-dsh-ask-mode/use-this-package/when-to-choose-it:
+  en: c09350ec1fd4fce3
+  zh: 2b915369c1d4da76
+/deepseek-ai-dsh-ask-mode/use-this-package/minimal-configuration:
+  en: 135fd7e5afaa4333
+  zh: bc02dd0571e465da
+/deepseek-ai-dsh-ask-mode/use-this-package/entering-and-leaving-ask-mode:
+  en: 461d272b4e496f09
+  zh: dc4d40e38819c06c
+/deepseek-ai-dsh-ask-mode/use-this-package/observing-ask-state:
+  en: a09ffb686553f401
+  zh: d1cd14d36a33441b
+/deepseek-ai-dsh-ask-mode/understand-the-implementation:
+  en: ee00c2cedd2120b5
+  zh: c2e72e60c2663495
+/deepseek-ai-dsh-ask-mode/understand-the-implementation/design-philosophy:
+  en: 2de46d7da8372cb7
+  zh: 8c2b691cb8f39277
+/deepseek-ai-dsh-ask-mode/understand-the-implementation/durable-state-and-step-boundary-appends:
+  en: 67f10f81a937b49a
+  zh: 65cef64e84006b7b
+/deepseek-ai-dsh-ask-mode/understand-the-implementation/the-ask-command:
+  en: c33a49d5bf25d769
+  zh: 12919def60734820
+/deepseek-ai-dsh-ask-mode/further-exploration:
+  en: ebd705c43ffa1da2
+  zh: 60d3dd4ff9c4a3e9
+/deepseek-ai-dsh-ask-mode/model-experience:
+  en: 215e7ba838619b7b
+  zh: a311da3843709f90
+/deepseek-ai-dsh-ask-mode/model-experience/ask-policy-system-prompt:
+  en: e465a87eda24cddc
+  zh: 51e0f7dbb04bb4a7
+/deepseek-ai-dsh-ask-mode/model-experience/ask-policy-system-prompt/what-the-model-sees:
+  en: 136916ec9467d0a1
+  zh: 38c6f0b9281d120d
+/deepseek-ai-dsh-ask-mode/model-experience/ask-policy-system-prompt/what-the-model-sees/configuration-example:
+  en: 85ceebb0d1aae24f
+  zh: 1954f2ad3d538621
+/deepseek-ai-dsh-ask-mode/model-experience/ask-policy-system-prompt/token-effect:
+  en: 109351cbc89d93ac
+  zh: 975369f2b33c709d
+/deepseek-ai-dsh-ask-mode/model-experience/ask-policy-system-prompt/kv-cache-effect:
+  en: 26fe2f99f6710286
+  zh: 4e1e2289e01a52f5
+/deepseek-ai-dsh-ask-mode/model-experience/human-command:
+  en: 4d1ec2182c2ac7ec
+  zh: 1c9c4a30d8a89075
+/deepseek-ai-dsh-ask-mode/model-experience/human-command/what-the-model-sees:
+  en: b1a9373ec38504cd
+  zh: e360f15af4b24a24
+/deepseek-ai-dsh-ask-mode/model-experience/human-command/token-effect:
+  en: ebd910426aaffec1
+  zh: ae5b6623a4061189
+/deepseek-ai-dsh-ask-mode/model-experience/human-command/kv-cache-effect:
+  en: 023c0af6eafdfcea
+  zh: 954ac03fe5361149
+/deepseek-ai-dsh-ask-mode/known-limitations-and-deferred-work:
+  en: b0b186f5f086911f
+  zh: d0090db448273405
+/deepseek-ai-dsh-ask-mode/known-limitations-and-deferred-work/dev-note:
+  en: dda15483bfa46b9f
+  zh: 9e5fc4109930f9a4

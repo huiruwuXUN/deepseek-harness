@@ -14,7 +14,7 @@ export type ComposerSubmitGesture = 'enter' | 'accelerated'
 export interface MessageSubmissionState {
   readonly sessionId?: import('@deepseek-ai/dsh-session/types').SessionId
   readonly model?: { readonly provider: string; readonly name: string; readonly effort?: string }
-  readonly runMode: 'default' | 'plan' | 'goal'
+  readonly runMode: 'default' | 'plan' | 'ask' | 'goal'
   readonly running: boolean
   /** Whether the Session is still blank, so this message is its first. */
   readonly newSession: boolean

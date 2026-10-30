@@ -205,7 +205,7 @@ function mount(
   const setPinned = vi.fn<(id: string, pinned: boolean) => void>()
   const renderSlot = ((key: string, owner: object, opts?: { only?: string; fallback?: ReactNode }) => {
     slotCalls.push(key)
-    if (key === 'conversation.input.model' || key === 'conversation.input.plan') {
+    if (key === 'conversation.input.model' || key === 'conversation.input.plan' || key === 'conversation.input.ask') {
       seatOwners.push({ key, owner })
     }
     if (key === 'conversation.hero.workspace') { pickerOwner = owner; return null }
@@ -475,6 +475,7 @@ describe('ConversationRoot resident composer', () => {
     const seat = (key: string) => b.seatOwners.filter(call => call.key === key).at(-1)?.owner
     expect(seat('conversation.input.model')).toEqual({ locked: false })
     expect(seat('conversation.input.plan')).toEqual({ locked: true })
+    expect(seat('conversation.input.ask')).toEqual({ locked: true })
   })
 
   it('lets the no-workspace posture win over a block', () => {

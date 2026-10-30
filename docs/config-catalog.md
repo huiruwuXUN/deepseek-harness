@@ -366,6 +366,23 @@ export interface Config {
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-api-workspace-files -->
 
+<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-ask-mode -->
+<a id="deepseek-aidsh-ask-mode"></a>
+
+## `@deepseek-ai/dsh-ask-mode`
+
+- `inject`: `systemPrompt` · `sessionProjections` · `agents`
+- `source`: [`packages/plan/ask-mode/src/index.ts:59`](../packages/plan/ask-mode/src/index.ts)
+
+```ts config-catalog
+/** Deployment-owned ask guidance. */
+export interface AskModeConfig {
+  /** Guidance rendered as the `ask:policy` prompt section while ask mode is active. */
+  section: string
+}
+```
+<!-- END GENERATED config-catalog:@deepseek-ai/dsh-ask-mode -->
+
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-attachment-local -->
 <a id="deepseek-aidsh-attachment-local"></a>
 
@@ -1508,6 +1525,39 @@ export type AnonymousTranslationProvider = 'google' | 'bing'
 export type PaidTranslationProvider = 'deepseek-account' | 'deepseek-official'
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-experimental-translator -->
+
+<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-experimental-turn-trigger -->
+<a id="deepseek-aidsh-experimental-turn-trigger"></a>
+
+## `@deepseek-ai/dsh-experimental-turn-trigger`
+
+- `inject`: `agents` · `sessions`
+- `source`: [`packages/experimental/turn-trigger/src/config.ts:26`](../packages/experimental/turn-trigger/src/config.ts)
+
+```ts config-catalog
+/** Plugin configuration as written in `cordis.yml`. */
+export interface TurnTriggerConfig {
+  /** Triggers evaluated after every completed turn. An empty list disables the plugin. */
+  rules?: TurnTriggerRule[]
+}
+
+/** One trigger declared in the profile configuration. */
+export interface TurnTriggerRule {
+  /** Stable identifier used in log lines, framing text, and cooldown keys. */
+  id: string
+  /**
+   * Regular expression source tested against the human text of a finished
+   * turn. Capture group 1, when the pattern has one, is the matched text
+   * interpolated into `prompt`.
+   */
+  match: string
+  /** Prompt delivered to the Session when the pattern matches; `{match}` interpolates the matched text. */
+  prompt: string
+  /** Minimum minutes between two firings of this rule in one Session. Defaults to 0. */
+  cooldownMinutes?: number
+}
+```
+<!-- END GENERATED config-catalog:@deepseek-ai/dsh-experimental-turn-trigger -->
 
 <!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-experimental-worktree -->
 <a id="deepseek-aidsh-experimental-worktree"></a>
@@ -3773,7 +3823,7 @@ export interface Config {
 
 ## `@deepseek-ai/dsh-system-prompt`
 
-- `source`: [`packages/core/system-prompt/src/index.ts:265`](../packages/core/system-prompt/src/index.ts)
+- `source`: [`packages/core/system-prompt/src/index.ts:266`](../packages/core/system-prompt/src/index.ts)
 
 ```ts config-catalog
 /** Plugin config: the deployment-authored fragment of the system prompt (see {@link Config.personaPrefix} for its contract). */
@@ -4835,6 +4885,7 @@ These load from a `cordis.yml` entry with no `config:` block; they declare no co
 | `@deepseek-ai/dsh-client-ui-action-cards` | — | [`packages/experimental/client-ui-action-cards/src/index.ts`](../packages/experimental/client-ui-action-cards/src/index.ts) |
 | `@deepseek-ai/dsh-client-ui-agent-preset` | — | [`packages/client/ui-agent-preset/src/index.ts`](../packages/client/ui-agent-preset/src/index.ts) |
 | `@deepseek-ai/dsh-client-ui-approval` | — | [`packages/client/ui-approval/src/index.ts`](../packages/client/ui-approval/src/index.ts) |
+| `@deepseek-ai/dsh-client-ui-ask` | — | [`packages/client/ui-ask/src/index.ts`](../packages/client/ui-ask/src/index.ts) |
 | `@deepseek-ai/dsh-client-ui-attachment` | — | [`packages/client/ui-attachment/src/index.ts`](../packages/client/ui-attachment/src/index.ts) |
 | `@deepseek-ai/dsh-client-ui-brand-official` | — | [`packages/client/ui-brand-official/src/index.ts`](../packages/client/ui-brand-official/src/index.ts) |
 | `@deepseek-ai/dsh-client-ui-chat` | — | [`packages/client/ui-chat/src/index.ts`](../packages/client/ui-chat/src/index.ts) |

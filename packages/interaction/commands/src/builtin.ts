@@ -4,6 +4,7 @@ import type { CommandDescriptor } from './types.ts'
 const BUILTINS = {
   goal: '@deepseek-ai/dsh-command-goal',
   plan: '@deepseek-ai/dsh-plan-mode',
+  ask: '@deepseek-ai/dsh-ask-mode',
   feedback: '@deepseek-ai/dsh-command-feedback',
   compact: '@deepseek-ai/dsh-command-compact',
   permission: '@deepseek-ai/dsh-permission-presets',
@@ -15,8 +16,8 @@ export type BuiltinCommandName = keyof typeof BUILTINS
 
 /** English and Simplified Chinese spellings recognized by command input. */
 export const builtinCommandTokens = {
-  en: { goal: 'goal', plan: 'plan', feedback: 'feedback', compact: 'compact', permission: 'permission', export: 'export' },
-  zh: { goal: '目标', plan: '计划', feedback: '反馈', compact: '压缩', permission: '权限', export: '导出' },
+  en: { goal: 'goal', plan: 'plan', ask: 'ask', feedback: 'feedback', compact: 'compact', permission: 'permission', export: 'export' },
+  zh: { goal: '目标', plan: '计划', ask: '问答', feedback: '反馈', compact: '压缩', permission: '权限', export: '导出' },
 } as const satisfies Record<'en' | 'zh', Record<BuiltinCommandName, string>>
 
 /**

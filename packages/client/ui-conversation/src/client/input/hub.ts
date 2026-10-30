@@ -6,6 +6,7 @@
  */
 import type {} from '@deepseek-ai/dsh-client-product-analytics/client'
 import type { PlanProjection } from '@deepseek-ai/dsh-plan-mode/types'
+import type { AskProjection } from '@deepseek-ai/dsh-ask-mode/types'
 import type { GoalProjection } from '@deepseek-ai/dsh-goal/types'
 import type { Context } from '@deepseek-ai/cordis'
 import type {
@@ -106,6 +107,7 @@ export class InputHub implements SessionInputResolver {
         const state = session.getSnapshot()
         const model = session.projections.faceOf('modelSelection').getSnapshot() as ModelSelectionProjection | undefined
         const plan = session.projections.faceOf('plan').getSnapshot() as PlanProjection | undefined
+        const ask = session.projections.faceOf('ask').getSnapshot() as AskProjection | undefined
         const goal = session.projections.faceOf('goal').getSnapshot() as GoalProjection | null | undefined
         const agentPreset = session.projections.faceOf('agentPreset').getSnapshot()
         const selection = model?.next ?? model?.lastUsed
@@ -115,7 +117,7 @@ export class InputHub implements SessionInputResolver {
             provider: selection.provider, name: selection.model,
             ...selection.reasoningEffort === undefined ? {} : { effort: selection.reasoningEffort },
           }) },
-          runMode: plan?.active ? 'plan' : goal?.goal.phase === 'active' ? 'goal' : 'default',
+          runMode: plan?.active ? 'plan' : ask?.active ? 'ask' : goal?.goal.phase === 'active' ? 'goal' : 'default',
           running: state.running,
           newSession: state.blank,
           ...typeof agentPreset === 'string' ? { agentPreset } : {},

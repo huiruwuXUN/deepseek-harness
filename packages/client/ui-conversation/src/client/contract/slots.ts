@@ -308,6 +308,8 @@ declare module '@deepseek-ai/dsh-client-ui-slots' {
     }
     /** Plan control inside the composer tool row. */
     'conversation.input.plan': { kind: 'single'; scope: 'session'; owner: InputControlOwnerProps }
+    /** Ask control inside the composer tool row; ask and plan are mutually exclusive modes. */
+    'conversation.input.ask': { kind: 'single'; scope: 'session'; owner: InputControlOwnerProps }
     /** Current-session permission control inside the composer tool row. */
     'conversation.input.permission': { kind: 'single'; scope: 'session'; owner: InputControlOwnerProps }
     /**
@@ -564,7 +566,7 @@ export type ComposerBarProps =
   & PropsRenderSlots<
     | 'conversation.input.attachments' | 'conversation.input.overlay'
     | 'conversation.input.permission'
-    | 'conversation.input.left' | 'conversation.input.plan'
+    | 'conversation.input.left' | 'conversation.input.plan' | 'conversation.input.ask'
     | 'conversation.input.right' | 'conversation.input.model' | 'conversation.input.activity'
     | 'conversation.composer.dock'
   >

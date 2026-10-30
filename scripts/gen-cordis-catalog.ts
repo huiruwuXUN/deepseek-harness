@@ -107,6 +107,7 @@ export const SERVICE_PAGE: Record<string, string> = {
   sessionFeedback: 'feedback.md',
   permissionPresets: 'permission-presets.md',
   planMode: 'plan.md',
+  askMode: 'ask-mode.md',
   terminals: 'terminal.md',
   sandbox: 'sandbox.md',
   sandboxPolicy: 'sandbox.md',

@@ -23,7 +23,7 @@ export interface ProductEventMap {
     session_id?: SessionId
     model_name?: string
     thinking_effort?: string
-    run_mode: 'plan' | 'goal' | 'default'
+    run_mode: 'plan' | 'ask' | 'goal' | 'default'
     msg_type: 'default' | 'steer' | 'queue'
     /** Whether the message is the first one of a blank Session. */
     is_new_session: boolean

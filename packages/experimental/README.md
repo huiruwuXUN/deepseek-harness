@@ -74,6 +74,7 @@ Promotion requires a named product role, documented public behavior and limitati
 | [`client-ui-agent-team`](client-ui-agent-team/README.md) | Team roster, task board, and teammate navigation for Web | — |
 | [`client-ui-stats`](client-ui-stats/README.md) | Per-turn and per-step context, timing, cache, and tool cost for Web | — |
 | [`auto-review`](auto-review/README.md) | Explicit Web layer for same-model review before each native or PTC inner tool call | — |
+| [`turn-trigger`](turn-trigger/README.md) | Follow-up prompts when a completed turn's human text matches a configured pattern | — |
 | [`subagent-oar`](subagent-oar/README.md) | Run standalone external coding-agent tasks through OAR | `ctx.subagents` |
 | [`tool-subagent-oar`](tool-subagent-oar/README.md) | Select a configured external agent for each delegated task | `ctx.tools` |
 | [`claude-code-mods`](claude-code-mods/README.md) | Run Claude Code mods as plugins: their hook chains on harness extension points and a band above the prompt | `ctx.claudeCodeMods` |
